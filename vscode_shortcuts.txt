@@ -1,0 +1,148 @@
+// Place your key bindings in this file to override the defaults
+[{
+    "key": "ctrl+alt+o",
+    "command": "editor.action.fixAll"
+},
+{
+    "key": "ctrl+alt+o",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+},
+{
+    "key": "shift+ctrl+alt+o",
+    "command": "editor.action.organizeImports",
+    "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+},
+{
+    "key": "shift+alt+o",
+    "command": "editor.action.organizeImports",
+    "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+},
+{
+    "key": "ctrl+alt+enter",
+    "command": "python.execInTerminal-icon"
+},
+{
+    "key": "ctrl+shift+r",
+    "command": "-editor.action.refactor",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+},
+{
+    "key": "shift+f6",
+    "command": "editor.action.refactor"
+},
+{
+    "key": "shift+f6",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+},
+{
+    "key": "f2",
+    "command": "-editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+numpad_divide",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+oem_2",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+alt+l",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+},
+{
+    "key": "ctrl+delete",
+    "command": "jupyter.interactive.clearAllCells"
+},
+{
+    "key": "ctrl+alt+win+enter",
+    "command": "jupyter.changeCellToMarkdown",
+    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+},
+{
+    "key": "ctrl+oem_1 m",
+    "command": "-jupyter.changeCellToMarkdown",
+    "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+},
+{
+    "key": "ctrl+alt+win+enter",
+    "command": "notebook.cell.changeToMarkdown",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+},
+{
+    "key": "m",
+    "command": "-notebook.cell.changeToMarkdown",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused && activeEditor == 'workbench.editor.notebook' && notebookCellType == 'code'"
+},
+{
+    "key": "ctrl+alt+win+down",
+    "command": "notebook.cell.insertMarkdownCellBelow"
+},
+{
+    "key": "ctrl+alt+win+up",
+    "command": "notebook.cell.insertMarkdownCellAbove"
+},
+{
+    "key": "ctrl+alt+win+enter",
+    "command": "jupyter.runallcells"
+},
+{
+    "key": "ctrl+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+alt+down",
+    "command": "notebook.cell.insertCodeCellBelow",
+    "when": "notebookEditable && config.notebook.insertToolbarLocation != 'betweenCells' && config.notebook.insertToolbarLocation != 'hidden'"
+},
+{
+    "key": "shift+enter",
+    "command": "-python.execInREPL",
+    "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+},
+{
+    "key": "shift+enter",
+    "command": "-jupyter.execSelectionInteractive",
+    "when": "editorTextFocus && isWorkspaceTrusted && jupyter.ownsSelection && !findInputFocussed && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+},
+{
+    "key": "shift+enter",
+    "command": "-python.execSelectionInTerminal",
+    "when": "editorTextFocus && !config.python.REPL.sendToNativeREPL && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+},
+{
+    "key": "ctrl+shift+alt+enter",
+    "command": "-jupyter.runAndDebugCell",
+    "when": "isWorkspaceTrusted && jupyter.ispythonnotebook && !notebookKernel && notebookCellType == 'code' || isWorkspaceTrusted && jupyter.ispythonnotebook && notebookCellType == 'code' && notebookKernel =~ /^ms-toolsai.jupyter\\// && resource not in 'jupyter.notebookeditor.debugDocuments'"
+},
+{
+    "key": "ctrl+shift+alt+enter",
+    "command": "python.execInREPL"
+},
+{
+    "key": "shift+alt+e",
+    "command": "editor.debug.action.selectionToRepl"
+},
+{
+    "key": "shift+alt+w",
+    "command": "jupyter.execSelectionInteractive"
+},
+{
+    "key": "shift+enter",
+    "command": "-python.execInREPL",
+    "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !accessibilityModeEnabled && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python' && activeEditor != 'workbench.editor.interactive'"
+},
+{
+    "key": "ctrl+enter",
+    "command": "-github.copilot.generate",
+    "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+}
+]
+
